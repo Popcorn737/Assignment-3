@@ -33,7 +33,7 @@ const dayButtons = [mondayBtn, tuesdayBtn, wednesdayBtn, thursdayBtn, fridayBtn]
 // when the day buttons are clicked, we will apply the "clicked" class to that element, and update any other relevant variables. Then, we can recalculate the total cost.
 // added challenge: don't update the dayCounter if the same day is clicked more than once. hint: .classList.contains() might be helpful here!
 
-dayButtons.forEach(btn => {
+dayButtons.forEach(function(btn) {
     btn.addEventListener('click', function() {
         if (this.classList.contains('clicked')) {
             // day already selected, deselect it
@@ -56,7 +56,7 @@ dayButtons.forEach(btn => {
 // when the clear-button is clicked, the "clicked" class is removed from all days, any other relevant variables are reset, and the calculated cost is set to 0.
 
 clearBtn.addEventListener('click', function() {
-    dayButtons.forEach(btn => {
+    dayButtons.forEach(function(btn) {
         btn.classList.remove('clicked');
     });
     daysSelected = 0;
